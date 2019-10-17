@@ -23,7 +23,7 @@ class Menu extends Component {
     constructor() {
       super();
       this.state = {
-        customers: []
+        fxbbbgbgb = []
       };
     }
   
