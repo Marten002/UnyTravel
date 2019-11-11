@@ -1,0 +1,74 @@
+.slick-track {
+    display: flex;
+}
+.slick-list, .slick-slider, .slick-active, .slick-slide {
+    width: 100vw;
+    height: 100vh;
+}
+.slide {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.slide1 {
+    background-image: url('./Carousel/slide1.png');
+}
+.slide2 {
+    background-image: url('./Carousel/slide2.png');
+}
+.slide3 {
+    background-image: url('./Carousel/slide3.png');
+}
+.slide4 {
+    background-image: url('./Carousel/slide4.png');
+}
+.slide5 {
+    background-image: url('./Carousel/slide5.png');
+}
+.slide6 {
+    background-image: url('./Carousel/slide6.png');
+}
+.location {
+    display: flex;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 5px;
+    width: max-content;
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    left: 5%;
+    bottom: 20px;
+    z-index: 500;
+}
+.location:hover {
+    border-bottom-color: rgba(0, 148, 255, .5);
+}
+.location:hover .location__count {
+    color: var(--theme-color);
+}
+.location:hover .location__img svg path {
+    fill: var(--theme-color);
+    opacity: 1;
+}
+.location__img svg path {
+    opacity: .5;
+}
+.location__count {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, .5);
+}
+.slide__button {
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    bottom: 18vh;
+    z-index: 500;
+}
+.slide__button:nth-child(1) {
+    margin: 0px 25px 0px 0px;
+}

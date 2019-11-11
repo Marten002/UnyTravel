@@ -22,6 +22,7 @@
 }
 .contact:nth-child(1) {
     margin-left: 0;
+    position: relative;
 }
 .contact__call--count {
     font-size: 12px;
@@ -80,8 +81,48 @@
     padding-bottom: 15px;
     padding: 0px 10px 15px;
 }
+.contact__profile {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+.contact__profile--active {
+    color: #000000;
+}
+.contact__profile--count {
+    font-size: 12px;
+    line-height: 16px;
+    align-self: flex-end;
+}
+.contact__profile--img {
+    margin-left: 10px;
+    align-self: flex-start;
+}
+.contact__profile--active .contact__profile--img {
+    border: 1px solid #000000;
+    border-radius: 50%;
+}
+.contact__profile--active .contact__profile--img img {
+    border-radius: 50%;
+}
+.contact__profile:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    cursor: default; 
+}
 
-
+/* SEARCH */
 
 .search__form {
     display: flex;

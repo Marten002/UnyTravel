@@ -1,0 +1,14 @@
+/* .modal {
+    margin: auto;
+    outline: none;
+    background: white;
+    font-size: 1.6rem;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    z-index: 10000!important;
+    background-color: rgba(55, 56, 56, 0.2)!important;
+}
+.modal__container {
+    max-width: 90%;
+    max-height: 90%;
+} */
