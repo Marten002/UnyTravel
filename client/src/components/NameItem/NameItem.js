@@ -48,7 +48,7 @@ class NameItem extends Component {
         return (
             <div data-item="nickname" className="form__item">
                 <label 
-                    for="nickname" 
+                    htmlFor="nickname" 
                     className={this.state.label}>Your Nickname</label>
                 <input 
                     type="text" 

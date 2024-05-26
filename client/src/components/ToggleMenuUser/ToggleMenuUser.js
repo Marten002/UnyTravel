@@ -1,49 +1,85 @@
 import React, { Component } from 'react';
 import './ToggleMenuUser.css';
+import Drawer from 'react-drag-drawer';
+import PersonalAccount from '../../module/PersonalAccount/PersonalAccount';
 
 class ToggleMenuUser extends Component {
     constructor(props){
         super(props);
         this.state  = {
-            userMenu: this.props.userMenu
+            open: false,
+            hidden: ''
         };
     };
 
-    handleToggleUserMenu = (event) => {
+    handleClientLogOut = (event) => {
+
+        event.preventDefault();
+        
+        localStorage.removeItem('usertoken');
+
+    };
+
+    handleClientLogIn = (event) => {
 
         event.preventDefault();
 
-        if(this.state.userMenu === '') {
-            
-            this.setState({
-                userMenu: ' menu__user--active'
-            });
+        document.body.style.overflow = 'hidden';
+        
+        this.setState({ 
+            open: !this.state.open 
+        });
 
-        } else {
+    };
 
-            this.setState({
-                userMenu: ''
-            });
 
-        }
+    handleStateUpdateModal = (isModalValue) => {
 
+        console.log(`lol:${isModalValue}`);
+
+        this.setState({ 
+            open: !this.state.open,
+        });
+
+        document.body.style.overflow = 'initial';
+
+        this.props.deliveryStateToggleMenu(isModalValue);
+        
     };
 
     render() {
         return (
-            <div className={"menu__user" + this.props.userMenu} onMouseEnter={this.handleToggleUserMenu} onMouseEnter={this.handleToggleUserMenu}>
+            <div className={"menu__user" + this.props.userMenu}>
                 <div className="menu__user--container">
-                    <a 
+                    <a  onClick={this.handleClientLogIn}
                         href=""
                         className="menu__user--link">
                         <span>My account</span>
                     </a>
-                    <a 
+                    <a  onClick={this.handleClientLogOut}
                         href=""
                         className="menu__user--link">
                         <span>Log-Out</span>
                     </a>
                 </div>
+                <Drawer
+                    open={this.state.open}
+                    onRequestClose={this.handleClientLogIn}
+                    onDrag={ () => {
+                        
+                    }}
+                    onOpen={ () => {
+
+                    }}
+                    allowClose={true}
+                    modalElementClass='modal__container modal__container--full'
+                    containerElementClass='modal'
+                    direction='top'
+                >
+                    <PersonalAccount  deliveryStateModal={this.state.open} deliveryStateIsModal={this.handleStateUpdateModal}>
+
+                    </PersonalAccount>
+                </Drawer>
             </div>
         );
     }

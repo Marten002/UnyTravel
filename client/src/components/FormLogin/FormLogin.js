@@ -32,7 +32,7 @@ class FormLogin extends Component {
             }
         })
 
-    };  
+    };
 
     handleStateUpdateLogin = (email) => {
 
@@ -74,7 +74,7 @@ class FormLogin extends Component {
                         id="remember" 
                         className="input--checkbox"/>
                     <label 
-                        for="remember" 
+                        htmlFor="remember" 
                         className="form__label--checkbox">Remember me?</label>
                     <a 
                         href="" 

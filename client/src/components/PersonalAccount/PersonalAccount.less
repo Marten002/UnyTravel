@@ -1,0 +1,366 @@
+.modal__container--full {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Proxima Nova;
+
+    .modal__content {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: initial;
+
+        .modal__header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            max-height: 50px;
+            margin-top: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
+            padding-bottom: 20px;
+
+            .modal__header--container {
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                max-height: 60px;
+                margin: 0 auto;
+
+                .modal__logo {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .img--fluid {
+                        max-width: 100%;
+                        display: block;
+                        height: auto;
+                    }
+                    .img--middle {
+                        width: 25px;
+                        height: 25px;
+                    }
+                    .img--modal-logo {
+
+                    }
+                    .logo__count {
+                        margin-left: 20px;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 29px;
+                        color: #0094FF;
+                    }
+                }
+                .modal__menu {
+                    display: flex;
+                    align-items: center;
+
+                    .modal__list {
+                        display: flex;
+                        list-style: none;
+                        align-items: center;
+
+                        .modal__item {
+                            margin-left: 40px;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+
+                            &:nth-child(1) {
+                                margin-left: 0px;
+                            }
+                            &:nth-child(5) {
+                                margin-left: 10px;
+                            }
+                            &:nth-child(4):before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: -20px;
+                                height: 20px;
+                                width: 1px;
+                                background-color: #0094FF;
+                            }
+                            .modal__link {
+                                text-decoration: none;
+                                color: #0094FF;
+                                font-weight: normal;
+                                font-size: 14px;
+                                
+                                .img--close {
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                            .modal__item--container {
+                                display: flex;
+                                align-items: center;
+
+                                .img--account-small {
+                                    margin-left: 10px;
+                                    width: 30px;
+                                    height: 30px;
+                                    border: 1px solid #0094FF;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .modal__body {
+
+            .modal__body--container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 90%;
+                height: 100%;
+                margin: 50px auto 50px;
+
+                .account__preview {
+                    max-width: 400px;
+                    width: 30%;
+
+                    .account__img {
+                        min-height: 385px;
+                        border: 1px dashed #000;
+
+                        .img--account-bigger {
+                            border-radius: 5px;
+                        }
+                    }
+                    .account__news {
+                        margin-top: 30px;
+
+                        .news {
+
+                            .news__title {
+                                font-weight: normal;
+                                font-size: 20px;
+                                color: #000000;
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid rgba(0, 0, 0, .1);
+                            }
+                            .news__item {
+                                padding: 10px;
+                                margin-top: 20px;
+                                box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+                                border: 1px solid rgba(0, 0, 0, .1);
+
+                                .news__item--header {
+                                    display: flex;
+
+                                    .news__locale {
+                                        margin-left: 10px;
+                                        font-style: normal;
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                        color: #0094FF;
+                                    }
+                                }
+                                .news__item--body {
+                                    margin: 10px 0px 0px;
+
+                                    .news--discription {
+                                        font-weight: normal;
+                                        font-size: 14px;
+                                        color: #000000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .account__information {
+                    width: 60%;
+                    max-width: 800px;
+                    max-height: 100vh;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-left: 50px;
+
+                    .account__information--header {
+                        width: 100%;
+                        max-height: 30px;
+                        display: flex;
+                        align-items: center;
+
+                        .user__name {
+                            font-weight: normal;
+                            font-size: 24px;
+                            color: #000000;
+                        }
+                        .user__location {
+                            display: flex;
+                            margin-left: 20px;
+                            font-weight: 300;
+                            font-size: 12px;
+                            color: #000000;
+
+                            span {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    .account__information--body {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin: 30px 0px;
+
+                        .user__travel {
+
+                            .user__travel--item {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 20px;
+
+                                .travel__name {
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    color: #000000;
+
+                                    a {
+
+                                        .lk-reviews--active {
+                                            display: block;
+                                            font-style: normal;
+                                            font-weight: normal;
+                                            font-size: 12px;
+                                            color: #0094FF;
+                                        }
+                                    }
+                                }
+                                .travel__count {
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    color: #000000;
+                                    margin-left: 10px;
+                                }
+                            }
+                            .travel {
+
+                                &--active {
+                                    padding-bottom: 5px;
+
+                                    .travel__name {
+                                        border-bottom: 1px solid #0094FF;
+                                        color: #0094FF;
+                                    }
+                                    .travel__count {
+                                        color: #0094FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .account__information--footer {
+                        margin-top: 135px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-direction: column;
+
+                        .lk-menu {
+                            width: 100%;
+                            height: 30px;
+                            display: flex;
+                            align-items: center;
+                            border-bottom: 1px solid rgba(0, 0, 0, .1);
+                            z-index: 10;
+
+                            .lk-menu--list {
+                                display: flex;
+                                width: 100%;
+                                list-style: none;
+
+                                .lk-menu--item {
+                                    margin-left: 40px;
+                                    font-weight: normal;
+                                    font-size: 15px;
+                                    cursor: pointer;
+                                    
+                                    &:nth-child(1) {
+                                        margin-left: 0px;
+                                    }
+                                    &-active {
+                                        padding-bottom: 11px;
+                                        border-bottom: 1px solid #0094FF;
+                                        color: #0094FF;
+                                        z-index: 11;
+                                    }
+                                }
+                            }
+                        }
+                        .lk-information {
+                            width: 100%;
+                            margin-top: 20px;
+
+                            .lk-information--container {
+                                display: flex;
+                                width: 100%;
+
+                                .lk-information--item {
+                                    margin-left: 50px;
+
+                                    &:nth-child(1) {
+                                        margin-left: 0px;
+                                    }
+                                    .lk-information--header {
+                                        font-weight: normal;
+                                        font-size: 14px;
+                                        color: rgba(62, 62, 62, 0.51);
+                                    }
+                                    .lk-information--body {
+
+                                        .lk-form {
+
+                                            .lk-form__item {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                margin-top: 10px;
+
+                                                .lk-form__name {
+                                                    font-weight: normal;
+                                                    font-size: 16px;
+                                                    color: #000000;
+                                                }
+                                                .lk-form__input {
+                                                    margin-left: 30px;
+
+                                                    input {
+                                                        width: 200px;
+                                                        height: 20px;
+                                                        border: none;
+                                                        padding: 0px 5px;
+                                                        font-size: 12px;
+                                                        color: #0094FF;
+
+                                                        &:hover {
+                                                            border: 1px dashed rgba(0, 148, 255, .5);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+
+}

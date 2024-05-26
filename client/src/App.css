@@ -1,3 +1,6 @@
+.App {
+  overflow: hidden;
+}
 .container {
   font-family: var(--light-font);
   color: var(--main-color);
@@ -26,4 +29,11 @@
 }
 .container__content--absolute {
   position: absolute;
+}
+
+.tsagrgdf {
+  left: 0px;
+  color: #fff;
+  position: fixed;
+  top: 0;
 }

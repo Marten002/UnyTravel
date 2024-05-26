@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CSSTransition } from 'react-transition-group';
+// import { CSSTransition } from 'react-transition-group';
 import './Modal.css';
 import FormLogin from '../FormLogin/FormLogin';
 import FormRegistration from '../FormRegistration/FormRegistration';
@@ -50,9 +50,9 @@ class ModalLogin extends Component {
 
         return (
             <div className="modal__content">
-                <CSSTransition
+                {/* <CSSTransition
                     in={true}
-                    timeout={200}>
+                    timeout={200}> */}
                 {(this.state.form === 'form--login' && 
                     <div className="modal__content--item modal__form">
                         <div className="modal__header">
@@ -67,7 +67,7 @@ class ModalLogin extends Component {
                         </div>
                     </div>
                 )}
-                </CSSTransition>
+                {/* </CSSTransition> */}
                 {(this.state.form === 'form--registration' && 
                     <div className="modal__content--item modal__form modal__form--registration">
                         <div className="modal__header">

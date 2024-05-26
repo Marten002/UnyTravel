@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './NavItem.css';
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
-class Nav__item extends Component {
+class NavItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
             active: 'menu__link--active',
         }
-    }
+    };
 
     render() {
 
@@ -18,7 +19,8 @@ class Nav__item extends Component {
                 <ul className="menu__list">
                     {Object.keys(nav__item).map((elem, index) => {
                         return <li key={index} data-item={index} className="menu__item">
-                                    <a href={nav__item[elem]} className="menu__link">{elem}</a>
+                                    <Link to={nav__item[elem]} className="menu__link">{elem}</Link>
+                                    {/* <a href={nav__item[elem]} className="menu__link">{elem}</a> */}
                                 </li> 
                     })}
                 </ul>
@@ -27,4 +29,4 @@ class Nav__item extends Component {
     }
 }
 
-export default Nav__item;
+export default NavItem;

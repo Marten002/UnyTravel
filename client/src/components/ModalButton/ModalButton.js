@@ -40,7 +40,7 @@ class ModalButton extends Component {
 
         /* Preview text */
 
-        if(this.props.previewTitleState == this.props.previewTitleDefault) {
+        if(this.props.previewTitleState === this.props.previewTitleDefault) {
 
             previewTitle = this.props.previewTitle;
 
@@ -50,7 +50,7 @@ class ModalButton extends Component {
 
         }
 
-        if(this.props.previewDiscriptionState == this.props.previewDiscriptionDefault) {
+        if(this.props.previewDiscriptionState === this.props.previewDiscriptionDefault) {
 
             previewDiscription = this.props.previewDiscription;
 

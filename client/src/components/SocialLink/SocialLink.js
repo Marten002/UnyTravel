@@ -12,6 +12,7 @@ class SocialLink extends Component {
         let formLabel = this.props.formLabel;
         let formInput = this.props.formInput;
         let linkAvatar = this.props.linkAvatar;
+        let linkAvatarBlack = this.props.linkAvatarBlack;
 
         let previewTitle = this.props.previewTitle;
         let previewDiscription = this.props.previewDiscription;
@@ -26,6 +27,7 @@ class SocialLink extends Component {
                     formLabel={formLabel}
                     formInput={formInput}
                     linkAvatar={linkAvatar}
+                    linkAvatarBlack={linkAvatarBlack}
                     previewTitle={previewTitle}
                     previewDiscription={previewDiscription}
                     previewTitleDefault={previewTitleDefault}

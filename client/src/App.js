@@ -1,18 +1,47 @@
+/* 
+    Import React, React Components and React libaryes  
+*/
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+/* 
+    Import Logo and main Style  
+    */
 import './logo.svg';
 import './App.css';
-// import Customers from './components/server/customers';
+/* 
+    Import custom Components  
+*/
 import Menu from './components/Menu/Menu';
 import Header from './components/Header/Header';
 import Carousel from './components/Carousel/Carousel';
-// import Container from './components/Container/Container';
-// import ContainerContent from './components/ContainerContent/ContainerContent';
+/* 
+    Import pages React-router  
+*/
+
+import Distination from './Pages/Distination/Distination';
+import Countries from './Pages/Countries/Countries';
+import Tours from './Pages/Tours/Tours';
+import Blog from './Pages/Blog/Blog';
+import Hot from './Pages/Hot/Hot';
+/* 
+    class App is main class -> info
+
+    UnyTravel version: ^1.2.000.0
+    Author: Marten002
+*/
 
 
 
 
-// import Profile from './components/Profile/Profile';
+
+
+// function importAll(r) {
+//     let images = {};
+//     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+//     return images;
+// }
+  
+// const images = importAll(require.context('./assets/images', false, /\.(png|jpe?g|svg)$/));
 
 let nav__item = {
     'Home': '/',
@@ -25,10 +54,9 @@ let nav__item = {
 
 let logo = 'UnyTravel';
 
-let searchButton = {
-    search: `https://svgshare.com/i/Fpz.svg`,
-    close: `https://svgshare.com/i/Fqf.svg`
-};
+let searchButtonImageOpen = 'https://svgshare.com/i/Fpz.svg';
+let searchButtonImageClose = 'https://svgshare.com/i/Fqf.svg';
+
 let socialLink = [
     'https://twitter.com',
     'https://facebook.com',
@@ -105,6 +133,7 @@ let formInput = [
     'password'
 ];
 let linkAvatar = 'https://sendeyo.com/up/d/0f44be3712';
+let linkAvatarBlack = 'https://sendeyo.com/up/d/822af12373';
 
 let previewTitleDefault = 'Hello, welcome back!';
 let previewDiscriptionDefault = 'Enter your E-mail and Password or join us now';
@@ -126,41 +155,25 @@ let previewDiscription = "Enter your data, than to register or Log-In to your ac
 */
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        this.state  = {
+            
+        };
+    };
 
     render() {
-
-        
-
         return (
-            // <Router>
-            //     <div className="App">
-            //         <Switch>
-            //             <Route path="http://localhost:3000/" return={
-            //                 () => {
-            //                     return [
-            //                         <div className="container container--preview fade">,
-            //                         <Carousel countryName={countryName} countryImage={countryImage}/>,
-            //                             <div className="container__content container__content--absolute">,
-            //                                 <Menu nav__item={nav__item} logo={logo} searchButton={searchButton} contactLink={contactLink} socialLink={socialLink} socialImage={socialImage} loginImage={loginImage} formLabel={formLabel} formInput={formInput} linkAvatar={linkAvatar} previewTitle={previewTitle} previewDiscription={previewDiscription}/>,
-            //                                 <Header offerTitle={offerTitle} offerDiscription={offerDiscription} distinationLink={distinationLink} distinationImage={distinationImage} distinationName={distinationName} heroDistination={heroDistination}/>,
-            //                             </div>,
-            //                         </div>
-            //                     ]
-            //                 }
-            //             }/>
-            //             <Route exact path="/profile" component={Profile} />
-            //         </Switch>
-            //     </div>
-            // </Router>
-
             <div className="App">
+                <Router>
                 <div className="container container--preview fade">
                     <Carousel countryName={countryName} countryImage={countryImage}/>
                     <div className="container__content container__content--absolute">
                         <Menu 
                             nav__item={nav__item} 
                             logo={logo} 
-                            searchButton={searchButton} 
+                            searchButtonImageOpen={searchButtonImageOpen}
+                            searchButtonImageClose={searchButtonImageClose}
                             contactLink={contactLink} 
                             socialLink={socialLink} 
                             socialImage={socialImage}
@@ -168,6 +181,7 @@ class App extends Component {
                             formLabel={formLabel}
                             formInput={formInput}
                             linkAvatar={linkAvatar}
+                            linkAvatarBlack={linkAvatarBlack}
                             previewTitle={previewTitle}
                             previewDiscription={previewDiscription}
                             previewTitleDefault={previewTitleDefault}
@@ -181,11 +195,43 @@ class App extends Component {
                             heroDistination={heroDistination}/>
                     </div>
                 </div>
-                {/* <Profile /> */}
+                {/* <Switch>
+                    <Route exact path="/destinations">
+                        <Destinations />
+                    </Route>
+                    <Route exact path="/countries">
+                        <Countries />
+                    </Route>
+                    <Route exact path="/tours">
+                        <Tours />
+                    </Route>
+                </Switch> */}
+                
+                    {/* <Route exact path="/destinations" component={Destinations} /> */}
+                </Router>
+
+                {/* <Router>
+                    <Switch>
+                        <Route exact path="/destinations" component={Destinations} />
+                    </Switch>
+                    <Switch>
+                        <Route exact path="/countries" component={Countries} />
+                    </Switch>
+                    <Switch>
+                        <Route exact path="/tours" component={Tours} />
+                    </Switch>
+                    <Switch>
+                        <Route exact path="/blog" component={Blog} />
+                    </Switch>
+                    <Switch>
+                        <Route exact path="/hot" component={Hot} />
+                    </Switch>
+                </Router> */}
+
             </div>
         );
     }
-}
+};
 
 export default App;
 

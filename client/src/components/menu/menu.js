@@ -5,6 +5,12 @@ import Nav from '../Nav/Nav';
 import Contact from '../Contact/Contact';
 
 class Menu extends Component {
+    constructor(props){
+        super(props);
+        this.state  = {
+            
+        };
+    };
 
     componentDidMount(){
         
@@ -61,13 +67,13 @@ class Menu extends Component {
             opacity: 1,
         });
 
-    }
+    };
   
     render() {
 
         let nav__item = this.props.nav__item;
         let logo = this.props.logo;
-        let searchButton = this.props.searchButton;
+
         let socialLink = this.props.socialLink;
         let socialImage = this.props.socialImage;
         let contactLink = this.props.contactLink;
@@ -76,6 +82,7 @@ class Menu extends Component {
         let formLabel = this.props.formLabel;
         let formInput = this.props.formInput;
         let linkAvatar = this.props.linkAvatar;
+        let linkAvatarBlack = this.props.linkAvatarBlack;
 
         let previewTitle = this.props.previewTitle;
         let previewDiscription = this.props.previewDiscription;
@@ -94,6 +101,7 @@ class Menu extends Component {
                     formLabel={formLabel}
                     formInput={formInput}
                     linkAvatar={linkAvatar}
+                    linkAvatarBlack={linkAvatarBlack}
                     previewTitle={previewTitle}
                     previewDiscription={previewDiscription}
                     previewTitleDefault={previewTitleDefault}
@@ -101,10 +109,12 @@ class Menu extends Component {
                 <Nav 
                     nav__item={nav__item} 
                     logo={logo} 
-                    searchButton={searchButton}/>
+                    searchButtonImageOpen={this.props.searchButtonImageOpen}
+                    searchButtonImageClose={this.props.searchButtonImageClose}
+                    />
             </header>
-      );
+        );
     }
-}
+};
   
 export default Menu;

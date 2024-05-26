@@ -51,7 +51,7 @@ class PasswordItem extends Component {
         return (
             <div data-item="password" className="form__item">
                 <label 
-                    for="password" 
+                    htmlFor="password" 
                     className={this.state.label}>Your password</label>
                 <input 
                     type="text" 

@@ -2,21 +2,34 @@ import React, { Component } from 'react';
 import './SearchButton.css';
 
 class SearchButton extends Component {
+    constructor(props){
+        super(props);
+        this.state  = {
+            open: 'false',
+            close: 'true'
+        };
+    };
+
+    clickToSearch = (event) => {
+
+        event.preventDefault();
+
+        this.props.clickToSearch();
+
+    };
+
     render() {
-        let searchButton = this.props.searchButton;
+
+        let searchButtonImage = this.props.searchButtonImage;
+        let searchButtonImageClass = this.props.searchButtonImageClass;
+        let searchButtonClass = this.props.searchButtonClass;
 
         return (
-            // <div className="">
-            <React.Fragment>
-                 {Object.keys(searchButton).map((elem, index) => {
-                        return  <button key={index} className="search__button search__button--open">
-                                    <img src={searchButton[elem]} alt={searchButton[elem]} className="img--fluid img--small img--search" />
-                                </button>
-                    })}
-            </React.Fragment>
-            // </div>
+            <button className={"search__button" + searchButtonClass} onClick={this.props.clickToSearch}>
+                <img src={searchButtonImage} alt="search" className={"img--fluid img--small" + searchButtonImageClass}/>
+            </button>
         );
-  }
+    }
 }
 
 export default SearchButton;

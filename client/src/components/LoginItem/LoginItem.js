@@ -63,7 +63,7 @@ class LoginItem extends Component {
         return (
             <div data-item="email" className="form__item">
                 <label 
-                    for="email" 
+                    htmlFor="email" 
                     className={inpuError.email.length > 0 ? `${this.state.label} form__label--error` : this.state.label}
                 >
                 Your E-Mail {inpuError.email.length > 1 && (

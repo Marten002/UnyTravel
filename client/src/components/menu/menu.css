@@ -102,13 +102,6 @@
     margin-left: 10px;
     align-self: flex-start;
 }
-.contact__profile--active .contact__profile--img {
-    border: 1px solid #000000;
-    border-radius: 50%;
-}
-.contact__profile--active .contact__profile--img img {
-    border-radius: 50%;
-}
 .contact__profile:after {
     content: '';
     display: block;
